@@ -7,7 +7,7 @@ const HomeSection = () => {
 	return (
 		<section className={classes.homeSection}>
 			<div className={classes.left}>
-				<h1>Let's build products together for life</h1>
+				<h1>{`Let's`} build products together for life</h1>
 				<p>
 					Onend is a digital solution for a product agency that relates people
 					relations, story development.
