@@ -1,0 +1,22 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem var(--side-padding);
+	background-color: var(--black);
+	color: var(--white);
+}
+.navbar__links {
+	display: flex;
+	align-items: center;
+}
+.navbar__links {
+	cursor: pointer;
+	transition: 250ms all;
+}
+.navbar__links > li:not(:last-child) {
+	margin-right: 3rem;
+}
+.navbar__links > li:hover {
+	color: var(--primary-color);
+}

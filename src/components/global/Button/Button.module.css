@@ -1,0 +1,24 @@
+.button {
+	background-color: #fff;
+	border: 0;
+	font-family: inherit;
+	font-size: 1.6rem;
+	padding: 2rem 5rem;
+	border-radius: 0.5rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: 250ms all;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.button > svg {
+	margin-left: 1rem;
+}
+.button:active {
+	transform: scale(0.96);
+}
+.button:hover {
+	background: var(--black);
+	color: var(--white);
+}
