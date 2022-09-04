@@ -1,20 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../components/global/Button";
 import { BsArrowRight } from "react-icons/bs";
 import classes from "./HomeSection.module.css";
 
-const HomeSection = () => {
+const HomeSection = ({ data }) => {
+	const [homeSectionData, setHomeSectionData] = useState(data);
 	return (
 		<section className={classes.homeSection}>
 			<div className={classes.left}>
-				<h1>{`Let's`} build products together for life</h1>
-				<p>
-					Onend is a digital solution for a product agency that relates people
-					relations, story development.
-				</p>
+				<h1>{homeSectionData?.title}</h1>
+				<p>{homeSectionData?.subTitle}</p>
 				<div className={classes.leftBottom}>
 					<Button>
-						Get Started
+						{homeSectionData?.buttonText}
 						<BsArrowRight />
 					</Button>
 					<img src="/assets/arrow.svg" alt="" className={classes.arrow} />

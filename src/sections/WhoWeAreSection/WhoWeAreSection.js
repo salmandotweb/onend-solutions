@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../components/global/Button";
 import { BsArrowRight } from "react-icons/bs";
 import classes from "./WhoWeAreSection.module.css";
 
-const WhoWeAreSection = () => {
+const WhoWeAreSection = ({ data }) => {
+	const [whoWeAreSectionData, setWhoWeAreSectionData] = useState(data);
+
 	return (
 		<section className={classes.whoWeAreSection}>
-			<p>Who We Are</p>
-			<h3>
-				Onend is a digital solution for a product agency that relates people
-				relations with products, story development, and other services.
-			</h3>
+			<p>{whoWeAreSectionData?.title}</p>
+			<h3>{whoWeAreSectionData?.content}</h3>
 			<Button styles={classes.getConsultationBtn}>
-				Get a free consultation
+				{whoWeAreSectionData?.buttonText}
 				<BsArrowRight />
 			</Button>
 		</section>
